@@ -518,20 +518,17 @@ PROJECTS
     margin: 0 20px;
 }
 
-.project__wrapper:hover .project__description
-.project__wrapper:active .project__description {
+.project__wrapper:hover .project__description {
     opacity: 1;
     transform: translateY(-50%);
 }
 
-.project__wrapper:hover .project__img,
-.project__wrapper:active .project__img {
+.project__wrapper:hover .project__img {
     transform: scale(1.07);
     filter: blur(5px);
 }
 
-.project__wrapper:hover .project__wrapper--bg,
-.project__wrapper:active .project__wrapper--bg {
+.project__wrapper:hover .project__wrapper--bg {
     opacity: 0.7;
 }
 
