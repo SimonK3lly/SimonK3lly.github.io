@@ -6,137 +6,160 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simon Kelly</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="shortcut icon" type="x-icon" href="/assets/SK.svg">
-    <script src="http://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script src="/index.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_MMIj52XpziKEGsa8KmSt9");
+        })();
+    </script>
 </head>
 
 <body>
-    <section id="about-me">
+    <section id="landing-page" onmousemove="moveBackground(event)">
         <nav>
-            <div class="personal__logo">Simon Kelly</div>
+            <figure>
+                <img id="personal-logo" src="/assets/SK.svg" alt="">
+            </figure>
             <ul class="nav__link--list">
-                <li class="nav__link">
-                    <a href="#languages" class="
-                    nav__link--anchor
-                    link__hover-effect
-                    link__hover-effect--black
-                    ">Languages</a>
+                <li class="nav__link" onclick="toggleModal()">
+                    <a href="#about" class="nav__link--anchor link__hover-effect link__hover-effect--black">About</a>
                 </li>
                 <li class="nav__link">
-                    <a href="#projects" class="
-                    nav__link--anchor
-                    link__hover-effect
-                    link__hover-effect--black
-                    ">Projects</a>
+                    <a href="#projects"
+                        class="nav__link--anchor link__hover-effect link__hover-effect--black">Projects</a>
                 </li>
-                <li class="nav__link">
-                    <a href="mailto:simonkelly3@gmail.com" class="
-                    nav__link--anchor
-                    nav__link--anchor-primary
-                    ">Contact</a>
+                <li class="nav__link" onclick="toggleModal()">
+                    <a href="#contact"
+                        class="nav__link--anchor link__hover-effect link__hover-effect--black">Contact</a>
+                </li>
+                <li class="nav__link click">
+                    <a href="#" class="nav__link--anchor link__hover-effect link__hover-effect--black"><i
+                            class="fas fa-adjust" onclick="toggleContrast()"></i></a>
                 </li>
             </ul>
         </nav>
-        <div class="flex flex-1">
-            <div class="about-me__info row">
-                <div class="about-me__info--container">
-                    <figure class="about-me__picture--mask">
-                        <img class="about-me__image" src="./assets/simon.jpeg" alt="Pic of rog">
-                    </figure>
-                    <h1 class="about-me__info--title">
-                        Hey! I'm <span class="text--purple"> Simon Kelly</span>&nbsp;<span class="wave">👋🏻</span> 
-                    </h1>
-                    <p class="about-me__info--para">
-                        What's the craic, I'm a <strong class="text--purple">frontend web developer</strong>. Lorem
-                        ipsum dolor sit amet consectetur adipisicing elit. Laborum assumenda, ullam veniam quod dolores
-                        animi harum itaque reiciendis ducimus iure ut dolorem ab nisi maiores, ipsa repellat ea beatae
-                        earum.
-                    </p>
-                    <div class="about-me__links">
-                        <a href="https://www.linkedin.com/in/simon-kelly-790682227/" class="about-me__link">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://github.com/SimonK3lly" class="about-me__link">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="mailto:simonkelly3@gmail.com" class="about-me__link">
-                            <i class="far fa-envelope"></i>
-                        </a>
-                        <a href="./assets/Simon Kelly CV - Public.pdf" target="_blank" class="about-me__link">
-                            <i class="fas fa-file-pdf"></i>
-                        </a>
-                    </div>
-                </div>
-                <figure class="about-me__img--container">
-                    <img src="./assets/undraw_websites.svg" alt="" class="about-me__img">
-                </figure>
-            </div>
-        </div>
-    </section>
-    <section id="languages">
-        <div class="container">
-            <div class="row">
-                <h1 class="section__title">This is my <span class="text--purple">technology stack</span></h1>
-                <div class="language__list">
-                    <div class="language">
-                        <figure class="language__img--wrapper">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/2048px-HTML5_Badge.svg.png"
-                                alt="HTML" class="language__img">
-                        </figure>
-                        <span class="language__name">HTML</span>
-                    </div>
-                    <div class="language">
-                        <figure class="language__img--wrapper">
-                            <img src="https://static.cdnlogo.com/logos/c/18/css.svg" alt="CSS" class="language__img">
-                        </figure>
-                        <span class="language__name">CSS</span>
-                    </div>
-                    <div class="language">
-                        <figure class="language__img--wrapper">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1822px-ISO_C%2B%2B_Logo.svg.png"
-                                alt="C++" class="language__img">
-                        </figure>
-                        <span class="language__name">C++</span>
-                    </div>
-                    <div class="language">
-                        <figure class="language__img--wrapper">
-                            <img src="https://cdn.freebiesupply.com/logos/large/2x/java-14-logo-png-transparent.png"
-                                alt="Java" class="language__img">
-                        </figure>
-                        <span class="language__name">Java</span>
-                    </div>
-                </div>
-            </div>
-        </div>
 
+
+        <header class="header">
+            <div class="header__content">
+                <h1 class="title">Hey</h1>
+                <h1 class="title orange">I'm Simon</h1>
+                <p class="header__para">I'm a <b class="orange">Frontend Software Engineer</b> with a passion for
+                    building web applications with great user experiences.
+                    <br>
+                    Here's a bit more <b class="orange click" onclick="toggleModal()">about me.</b>
+                </p>
+                <div class="social__list">
+                    <a href="https://www.linkedin.com/in/simon-kelly-790682227/"
+                        target="https://www.linkedin.com/in/simon-kelly-790682227/" class="social__link click"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/SimonK3lly" target="https://github.com/SimonK3lly"
+                        class="social__link click"><i class="fab fa-github"></i></a>
+                    <a href="/assets/Simon Kelly CV - Public.pdf" class="social__link click"><i
+                            class="fas fa-file-pdf"></i></a>
+                </div>
+            </div>
+        </header>
+        <a href="#">
+            <button class="mail__btn click" onclick="toggleModal()"><i class="fas fa-envelope"></i></button>
+        </a>
+        <a href="#projects" class="scroll">
+            <div class="scroll__icon click"></div>
+        </a>
+        <div class="modal">
+            <div class="modal__half modal__about">
+                <h3 class="modal__title modal__title--about">Here's a bit about me.</h3>
+                <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer.</h4>
+                <p class="modal__para ">I'm a 21 year old Irish <b class="orange">frontend software engineer</b> with a
+                    strong passion for developing websites with great <b class="orange">user experiences.</b>
+                    <br>
+                    I currently work on difficult engineering problems and learn from a team consisting of some of the
+                    most <b class="orange">talented</b> and <b class="orange">experienced</b> software engineers every
+                    day.
+                </p>
+                <div class="modal__languages">
+                    <figure class="modal__language">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/2048px-HTML5_Badge.svg.png"
+                            alt="Language" class="modal__language--img">
+                        <span class="language__name">HTML</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/2048px-HTML5_Badge.svg.png"
+                            alt="Language" class="modal__language--img">
+                        <span class="language__name">HTML</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/2048px-HTML5_Badge.svg.png"
+                            alt="Language" class="modal__language--img">
+                        <span class="language__name">HTML</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/2048px-HTML5_Badge.svg.png"
+                            alt="Language" class="modal__language--img">
+                        <span class="language__name">HTML</span>
+                    </figure>
+                </div>
+            </div>
+            <div class="modal__half modal__contact">
+            <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+                <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
+                <h4 class="modal__sub-title modal__sub-title--contact">I'm currently open to new opportunities.</h4>
+                <form id="contact__form" onsubmit="contact(event)">
+                    <div class="form__item">
+                        <label class="form__item--label">Name</label>
+                        <input type="text" class="input" name="user_name" required></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Email</label>
+                        <input type="email" class="input" name="user_email" required></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Message</label>
+                        <textarea type="text" class="input" name="user_message" required></textarea>
+                    </div>
+                    <button id="contact__submit" class="form__submit">
+                        Send it my way
+                    </button>
+                </form>
+                <div class="modal__overlay modal__overlay--loading">
+                    <i class="fas fa-spinner"></i>
+                </div>
+                <div class="modal__overlay modal__overlay--success">
+                    Thanks for the message. I will get back to you soon!
+                </div>
+            </div>
+        </div>
+        <img src="/assets/semi circle.svg" class="shape shape--0">
+        <img src="/assets/circle.svg" class="shape shape--1">
+        <img src="/assets/squiggly.svg" class="shape shape--2">
+        <img src="/assets/circle.svg" class="shape shape--3">
+        <img src="/assets/triangle.svg" class="shape shape--4">
+        <img src="/assets/circle.svg" class="shape shape--5">
+        <img src="/assets/squiggly.svg" class="shape shape--6">
+        <img src="/assets/circle.svg" class="shape shape--7">
+        <img src="/assets/semi circle.svg" class="shape shape--8">
     </section>
+
+
     <section id="projects">
         <div class="container">
             <div class="row">
-                <h1 class="section__title">Here are some of my <span class="text--purple">projects</span></h1>
+                <h1 class="section__title">Here are some of my <span class="orange">projects</span></h1>
                 <ul class="project__list">
                     <li class="project">
                         <div class="project__wrapper">
-                            <img src="./assets/loopit.png" class="project__img" alt="">
+                            <img src="/assets/mockup-of-a-macbook-pro-on-a-coffee-shop-table-2315-el1.png" class="project__img" alt="">
+                            <div class="project__wrapper--bg"></div>
                             <div class="project__description">
-                                <h3 class="project__description--title">Car sales project</h3>
-                                <h4 class="project__description--sub-title">
-                                    HTML, CSS, Javascript
-                                </h4>
-                                <p class="project__description--para">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit eos
-                                    laboriosam dicta at aliquid nihil! Sit doloribus eos numquam beatae molestiae ut
-                                    obcaecati assumenda deleniti nobis corrupti? Placeat, voluptate dolorum.
-                                </p>
+                                <h3 class="project__description--title">Personal Website</h3>
+                                <h4 class="project__description--sub-title">HTML, CSS</h4>
+                                <p class="project__description--para">This was my first personalized project. This gave me a great understanding of how HTML and CSS work in harmony together. It was a nice way to get practice using the basics of the sytntaxes</p>
                                 <div class="project__description--links">
-                                    <a href="https://github.com/SimonK3lly" target="_blank"
-                                        class="project__description--link">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                    <a href="https://www.mywebsite.com" class="project__description--link">
-                                        <i class="fas fa-link"></i>
-                                    </a>
+                                    <a href="https://github.com/SimonK3lly" target="_blank" class="project__description--link"><i class="fab fa-github"></i></a>
+                                    <a href="http://simonk.ie/old-eportfolio/" target="_blank" class="project__description--link"><i class="fas fa-link"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -146,42 +169,28 @@
         </div>
     </section>
     <footer>
-        <div class="row footer__row">
-            <a href="#" class="footer__anchor">
-                <figure class="footer__logo">
-                    <img src="./assets/SK.svg" class="footer__logo--img" alt="">
-                </figure>
-                <span class="footer__logo--popper">
-                    Top
-                    <i class="fas fa-arrow-up"></i>
-                </span>
-            </a>
-            <div class="footer__social--list">
-                <a href="https://github.com/SimonK3lly" target="https://github.com/SimonK3lly" class="
-                footer__social--link
-                link__hover-effect
-                link__hover-effect--white
-                " target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/simon-kelly-790682227/" target="https://www.linkedin.com/in/simon-kelly-790682227/" class="
-                footer__social--link
-                link__hover-effect
-                link__hover-effect--white
-                ">LinkedIn</a>
-                <a href="mailto:simonkelly3@gmail.com" target="_blank" class="
-                footer__social--link
-                link__hover-effect
-                link__hover-effect--white
-                " target="_blank">Email</a>
-                <a href="./assets/Simon Kelly CV - Public.pdf" target="_blank" class="
-                footer__social--link
-                link__hover-effect
-                link__hover-effect--white
-                " target="_blank">CV</a>
+        <div class="container">
+            <div class="row footer__row">
+                <a href="#">
+                    <figure>
+                        <img src="/assets/SK.svg" alt="" class="footer__logo--img">
+                    </figure>
+                </a>
+                <div class="footer__social--list">
+                    <a href="https://github.com/SimonK3lly" target="https://github.com/SimonK3lly"
+                        class="footer__social--link link__hover-effect link__hover-effect--white">GitHub</a>
+
+                    <a href="https://www.linkedin.com/in/simon-kelly-790682227/"
+                        target="https://www.linkedin.com/in/simon-kelly-790682227/"
+                        class="footer__social--link link__hover-effect link__hover-effect--white">LinkedIn</a>
+                    <a href="#" class="footer__social--link link__hover-effect link__hover-effect--white" onclick="toggleModal()">Contact</a>
+                    <a href="/assets/Simon Kelly CV - Public.pdf" target="_blank"
+                        class="footer__social--link link__hover-effect link__hover-effect--white">CV</a>
+                </div>
+                <div class="footer__copyright">Copyright &copy; 2022 Simon Kelly</div>
             </div>
-            <div class="footer__copyright">Copyright © 2022 Simon Kelly</div>
         </div>
     </footer>
-
 </body>
 
 </html>
