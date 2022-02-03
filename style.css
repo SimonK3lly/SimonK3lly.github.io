@@ -48,7 +48,7 @@ input:hover, textarea:hover {
 }
 
 input:focus, textarea:focus {
-    border-color: #f06449;
+    border-color: #00ad1d;
 }
 
 button {
@@ -78,9 +78,6 @@ section {
     line-height: 1;
 }
 
-.orange {
-    color: #f06449;
-}
 
 p {
     line-height: 1.5;
@@ -171,6 +168,9 @@ nav,
     color: #242424;
 }
 
+.orange {
+    color: #00ad1d;
+}
 /* 
 
 LANDING PAGE
@@ -203,7 +203,7 @@ LANDING PAGE
 }
 
 .social__link {
-    background-color: #f06449;
+    background-color: #00ad1d;
     color: white;
     padding: 6px;
     width: 32px;
@@ -385,6 +385,7 @@ MODAL
 
 .modal__language--img {
     width: 100%;
+    max-height: 69.5px;
 }
 
 .modal__contact {
@@ -412,8 +413,8 @@ MODAL
 }
 
 .form__submit {
-    background-color: #f06449;
-    border: 2px solid #f06449;
+    background-color: #00ad1d;
+    border: 2px solid #00ad1d;
     color: white;
     font-weight: bold;
     max-width: 240px;
@@ -429,8 +430,8 @@ MODAL
 }
 
 .form__submit:active {
-    border-color: #f06449;
-    color: #f06449;
+    border-color: #00ad1d;
+    color: #00ad1d;
 }
 
 .modal__overlay {
