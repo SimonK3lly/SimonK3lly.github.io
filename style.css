@@ -508,6 +508,7 @@ PROJECTS
 .project__img {
     width: 100%;
     transition: all 450ms ease;
+    display: flex;
 }
 
 .project__wrapper {
