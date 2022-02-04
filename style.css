@@ -516,10 +516,14 @@ PROJECTS
     border-radius: 20px;
     box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.45);
     overflow: hidden;
-    margin: 0 20px;
+    margin:  60px 20px;
 }
 
 .project__wrapper:hover .project__description {
+    opacity: 1;
+    transform: translateY(-50%);
+}
+.project__wrapper:active .project__description {
     opacity: 1;
     transform: translateY(-50%);
 }
