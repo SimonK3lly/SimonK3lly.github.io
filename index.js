@@ -62,3 +62,8 @@ function toggleModal() {
     isModalOpen = true;
     document.body.classList += " modal--open";
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    var video = document.getElementById('myVideo');
+    video.playbackRate = 2.5;
+});
